@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nuevo Pedido | Pompompurin Restaurante</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header class = "encabezado">
+
+        <div class = "logo">
+            🍮
+        </div>
+
+        <div>
+
+            <h1>Mi Restaurante</h1>
+
+            <p>Gestion de pedidos</p>
+
+
+        </div>
+    </header>
+
+    <!-- contenido principal -->
+    <main class = "contenedor">
+
+        <div class = "titulo">
+
+            <h2>🍮 Nuevo Pedido</h2>
+
+            <p>Registra los platos que deseas agregar al pedido</p>
+
+        </div>
+
+        <!-- datos del pedido -->
+        <section class = "tarjeta">
+
+            <h3>🍮 Datos del pedido</h3>
+
+            <div class = "formulario">
+
+                <div class = "campo">
+
+                    <label for = "cliente">
+                        Cliente
+                    </label>
+
+                    <input 
+                        type = "text" 
+                        id ="cliente" 
+                        placeholder =" Nombre del cliente"
+                    >
+
+                </div>
+
+                <div class = "campo">
+
+                    <label for = "plato">
+                        Plato
+                    </label>
+
+                    <select id = "plato">
+
+                        <option value = "">
+                            🍮Selecciona el Plato
+                        </option>
+
+                        <option>Hamburguesa</option>
+                        <option>Pizza especial</option>
+                        <option>Pasta alfredo</option>
+                        <option>Ensalada</option>
+
+                    </select>
+
+                </div>
+                <div class = "campo">
+
+                    <label for = "categoria">
+                        Categoria
+                    </label>
+
+                    <select id = "categoria">
+
+                        <option value = "">
+                            🍮Selecciona una categoria
+                        </option>
+
+                        <option>Entrada</option>
+                        <option>Plato fuerte</option>
+                        <option>Bebida</option>
+                        <option>🍮Postre</option>
+
+                    </select>
+                </div>
+                
+                <div>
+
+                    <div class = "campo">
+
+                        <label for = "materia">
+                            Materia prima
+                        </label>
+
+                        <input
+                            type = "text"
+                            id = "materia"
+                            placeholder="Ejemplo: Carne, Harina, Verduras"
+                        >
+
+                    </div>
+
+                    <div class = "campo"></div>
+
+                    <label for = "unidad">
+                        Unidad de medida
+                    </label>
+
+                    ><select id="unidad">
+
+                        <option value = ""></option>
+                        <option>Unidad</option>
+                        <option>Porcion</option>
+                        <option>Docena</option>
+                        <option>Kilogramo</option>
+
+                    </select>
+                </div>
+                
+                <div class = "campo">
+                    
+                    <label for = "cantidad">
+                        Cantidad
+                    </label>
+
+                    <input
+                        type = "number"
+                        id = "cantidad"
+                        min = "1"
+                        value = "1"
+                    >
+                </div>
+
+            </div>
+
+        </section>
+
+        <!---Resumen--->
+
+        <section class = "tarjeta-resumen">
+
+            <h3>🍮 Resumen del pedido</h3>
+
+            <div class = "Pedido-vacio">
+
+                <div class = "icono-pedido">🍮</div>
+
+                <p>Aun no has agregado ninguna comida</p>
+
+                <span> 
+
+                    Selecciona la informacion del pedido para continuar
+
+                </span>
+            </div>
+
+            <div class = "total">
+
+                <strong>Total</strong>
+
+                <strong>$0</strong>
+            </div>
+        </section>
+
+        <!--BOTONEEEEEEEEEEES-->
+
+        <div class = "acciones">
+
+            <button class = "btn cancelar">
+                Cancelar
+            </button>
+            <button class = "btn guardar">
+                🍮Guardar pedido
+            </button>
+
+        </div>
+    </main>
+    <!--pie de paginaaaaa-->
+
+    <footer>
+        <p>🍮Restaurante: Sistema de pedidos</p>
+    </footer>
+
+</body>
+
+</html>
