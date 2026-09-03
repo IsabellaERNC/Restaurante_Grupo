@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap');
+
+.encabezado h1,
+.titulo h2,
+.tarjeta h3,
+.tarjeta-resumen h3 {
+    font-family: "Dancing Script", cursive;
+}
+
+/*-------Pompompurin*/ 
+
+body {
+    margin: 0;
+    background-color: #fff8dc;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: #5a4632;
+}
+
+/*---- class encabezado*/
+
+.encabezado {
+    padding: 25px 40px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 3px solid #e8bd32;
+
+    background-image: url("../img/cuadros.jpg");
+    background-size: 400px 400px;
+}
+
+.encabezado img {
+    position: absolute;
+    right: 40px;
+    top: 5px;
+    width: 100px;
+    height: auto;
+}
+
+.logo {
+    font-size: 45px;
+}
+
+.encabezado h1 {
+    margin: 0;
+    color: #5a4632;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.encabezado p {
+    margin: 4px 0 0;
+    color: #76583a;
+    font-size: 16px;
+}
+
+/*---contenedor principal*/
+
+.contenedor {
+    width:90%;
+    max-width:1000px;
+    margin:35px auto;
+
+}
+
+/*--titulo--*/
+
+.titulo {
+    margin-bottom:25px;
+}
+
+.titulo h2 {
+    margin-bottom: 8px;
+    color: #5a4632;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.titulo p {
+    margin: 0;
+    color: #80664a;
+}
+
+/* ------- tarjetas */
+
+.tarjeta,
+.tarjeta-resumen {
+    background-color: #fffdf2;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 18px rgba(90, 70, 50, 0.12);
+    border: 2px solid #f3d477;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.tarjeta h3,
+.tarjeta-resumen h3 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #5a4632;
+    font-size: 22px;
+}
+
+/*-------formulario*/
+
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo label {
+    font-weight: bold;
+    color: #5a4632;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 2px solid #eadca8;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #5a4632;
+    font-size: 15px;
+}
+
+/* Efecto al seleccionar un campo */
+
+.campo input:focus,
+.campo select:focus {
+    outline: none;
+    border-color: #e5b93f;
+    box-shadow: 0 0 0 3px rgba(229, 185, 63, 0.20);
+}
+
+/* ------- botones*/
+
+.acciones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn {
+    border: none;
+    border-radius: 12px;
+    padding: 12px 22px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cancelar {
+    background-color: #fff;
+    color: #5a4632;
+    border: 2px solid #e8d49a;
+}
+
+.guardar {
+    background-color: #f4c842;
+    color: #5a4632;
+}
+
+.guardar:hover {
+    background-color: #e9b92e;
+}
+
+/* ------- pie de pagina*/
+
+footer {
+    width: 100%;
+    min-height: 150px;
+    box-sizing: border-box;
+
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 40px;
+
+    color: #806b50;
+    font-size: 14px;
+
+    background-image: url("../img/cuadros.jpg");
+    background-size: 400px 400px;
+    background-position: center;
+    background-repeat: repeat;
+}
+/* ------- campo del formulario*/
+
+.campo input::placeholder {
+    color: #b8a98e;
+}
+
+/* ------- resumen- */
+
+.Pedido-vacio {
+    text-align: center;
+    padding: 25px;
+    color: #806b50;
+}
+
+.icono-pedido {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.Pedido-vacio p {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.Pedido-vacio span {
+    font-size: 14px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #eadca8;
+    padding-top: 18px;
+    margin-top: 15px;
+    font-size: 20px;
+    color: #5a4632;
+}
+

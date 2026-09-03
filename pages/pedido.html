@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Nuevo Pedido | Pompompurin Restaurante</title>
+    
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pedido.css">
 </head>
 
 <body>
@@ -17,10 +18,13 @@
         <div class = "logo">
             🍮
         </div>
+            <img src="../img/comida.png" alt ="Pompompurin">
 
         <div>
 
             <h1>Mi Restaurante</h1>
+            <img src="../img/comida.png" alt ="Pompompurin">
+            
 
             <p>Gestion de pedidos</p>
 
@@ -99,39 +103,45 @@
 
                     </select>
                 </div>
-                
-                <div>
-
+            
                     <div class = "campo">
 
                         <label for = "materia">
                             Materia prima
                         </label>
 
-                        <input
-                            type = "text"
-                            id = "materia"
-                            placeholder="Ejemplo: Carne, Harina, Verduras"
-                        >
+                        <select id = "materia">
+
+                            <option value = "">
+                                Selecciona una materia prima
+                            </option>
+
+                            <option>Proteina</option>
+                            <option>Carbohidratos</option>
+                            <option>Fariceos y Ensalada</option>
+                            <option>Lacteos y huevo</option>
+                            <option>Aborrotes y despensa</option>
+
+                        </select>
 
                     </div>
+                    <div class="campo">
 
-                    <div class = "campo"></div>
+                        <label for="unidad">
+                            Unidad de medida
+                        </label>
 
-                    <label for = "unidad">
-                        Unidad de medida
-                    </label>
+                        <select id="unidad">
 
-                    ><select id="unidad">
+                            <option value="">Selecciona una unidad</option>
+                            <option>Unidad</option>
+                            <option>Porción</option>
+                            <option>Docena</option>
+                            <option>Kilogramo</option>
 
-                        <option value = ""></option>
-                        <option>Unidad</option>
-                        <option>Porcion</option>
-                        <option>Docena</option>
-                        <option>Kilogramo</option>
+                        </select>
 
-                    </select>
-                </div>
+                    </div>
                 
                 <div class = "campo">
                     
@@ -156,6 +166,7 @@
         <section class = "tarjeta-resumen">
 
             <h3>🍮 Resumen del pedido</h3>
+            
 
             <div class = "Pedido-vacio">
 
