@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Comprobante de Egreso | Enterprise Core</title>
+
+    <link rel="stylesheet" href="../css/Comprobante.css" />
+  </head>
+  <body>
+    <!-- Fondo con malla sutil estilo Vercel/Linear -->
+
+    <div class="bg-grid"></div>
+
+    <!-- Sección de Autenticación / Inicio de Sesión -->
+
+    <div class="auth-wrapper" id="login-section">
+      <div class="glass-card">
+        <div class="card-header">
+          <div class="brand-glow-icon">
+            <div class="inner-dot"></div>
+          </div>
+
+          <h1>RESTAURANTE</h1>
+
+          <p>Autenticación requerida para acceder al módulo financiero</p>
+        </div>
+
+        <form onsubmit="handleLogin(event)">
+          <div class="input-group">
+            <label for="email">Correo electrónico</label>
+
+            <div class="input-wrapper">
+              <input
+                type="email"
+                id="email"
+                placeholder="admin@restaurante.com"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="password">Contraseña de acceso</label>
+
+            <div class="input-wrapper">
+              <input
+                type="password"
+                id="password"
+                placeholder="••••••••••••"
+                required
+              />
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary">
+            <span>Acceder al Sistema</span>
+
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
+        </form>
+
+        <div class="card-footer-info">
+          <span>Seguridad cifrada de extremo a extremo</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Módulo Principal: Comprobante de Egreso -->
+
+    <div class="dashboard-wrapper hidden" id="dashboard-section">
+      <header class="top-nav">
+        <div class="nav-left">
+          <div class="status-indicator"></div>
+
+          <span class="nav-brand">Restaurante_Grupo</span>
+
+          <span class="nav-divider">/</span>
+
+          <span class="nav-page">Comprobante de Egreso</span>
+        </div>
+
+        <div class="nav-right">
+          <div class="user-pill">
+            <span class="user-status-dot"></span>
+
+            <span>Sesión Activa</span>
+          </div>
+
+          <button class="btn-secondary btn-sm" onclick="handleLogout()">
+            Cerrar Sesión
+          </button>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <div class="form-container glass-card-large">
+          <div class="section-title">
+            <div class="title-badge">Módulo Financiero</div>
+
+            <h2>Nuevo Comprobante de Egreso</h2>
+
+            <p>
+              Registre de forma oficial la salida de capital y seleccione el
+              canal de desembolso.
+            </p>
+          </div>
+
+          <form
+            class="egreso-form"
+            onsubmit="
+              event.preventDefault();
+              alert('¡Comprobante generado con éxito!');
+            "
+          >
+            <div class="grid-2">
+              <div class="input-group">
+                <label for="concepto">Concepto de pago</label>
+
+                <div class="input-wrapper">
+                  <input
+                    type="text"
+                    id="concepto"
+                    placeholder="Ej. Liquidación a proveedor de carnes"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label for="forma-pago">Forma de pago</label>
+
+                <div class="input-wrapper select-wrapper">
+                  <select id="forma-pago" required>
+                    <option value="" disabled selected>
+                      Seleccione método de pago
+                    </option>
+
+                    <option value="efectivo">Efectivo (Caja General)</option>
+
+                    <option value="transferencia">
+                      Transferencia Bancaria (Bancolombia)
+                    </option>
+
+                    <option value="tarjeta">
+                      Tarjeta Corporativa / Crédito
+                    </option>
+
+                    <option value="cheque">Cheque de Gerencia</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="input-group">
+                <label for="monto">Monto total del egreso ($)</label>
+
+                <div class="input-wrapper currency-wrapper">
+                  <span class="currency-symbol">$</span>
+
+                  <input
+                    type="number"
+                    id="monto"
+                    placeholder="0.00"
+                    step="0.01"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label for="beneficiario">Beneficiario / Tercero</label>
+
+                <div class="input-wrapper">
+                  <input
+                    type="text"
+                    id="beneficiario"
+                    placeholder="Nombre o NIT de la empresa"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="observaciones">Observaciones o notas contables</label>
+
+              <div class="input-wrapper">
+                <textarea
+                  id="observaciones"
+                  rows="3"
+                  placeholder="Detalle la justificación de este movimiento financiero..."
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button
+                type="button"
+                class="btn-secondary"
+                onclick="document.querySelector('.egreso-form').reset()"
+              >
+                Limpiar campos
+              </button>
+
+              <button type="submit" class="btn-primary">
+                <span>Generar y Firmar Comprobante</span>
+
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      function handleLogin(e) {
+        e.preventDefault();
+
+        document.getElementById("login-section").style.opacity = "0";
+
+        setTimeout(() => {
+          document.getElementById("login-section").classList.add("hidden");
+
+          document
+            .getElementById("dashboard-section")
+            .classList.remove("hidden");
+        }, 200);
+      }
+
+      function handleLogout() {
+        document.getElementById("dashboard-section").classList.add("hidden");
+
+        const login = document.getElementById("login-section");
+
+        login.classList.remove("hidden");
+
+        login.style.opacity = "1";
+      }
+    </script>
+  </body>
+</html>
