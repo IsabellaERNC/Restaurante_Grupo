@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recibo de Caja</title>
+    <link rel="stylesheet" href="../css/recibo.css">
+</head>
+<body>
+
+    <main class="recibo-container">
+        <h2>Recibo de Caja</h2>
+        
+        <form id="form-recibo" class="grid-form">
+            <!-- Datos del Cliente -->
+            <div class="form-group">
+                <label for="nombre-cliente">Nombre del Cliente</label>
+                <input type="text" id="nombre-cliente" placeholder="Ej. Ana María Gómez" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tipo-doc">Tipo de Documento</label>
+                <select id="tipo-doc" required>
+                    <option value="" disabled selected>Seleccione...</option>
+                    <option value="CC">Cédula de Ciudadanía</option>
+                    <option value="CE">Cédula de Extranjería</option>
+                    <option value="NIT">NIT</option>
+                    <option value="Pasaporte">Pasaporte</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="num-doc">Número de Identificación</label>
+                <input type="text" id="num-doc" placeholder="Ej. 1020304050" required>
+            </div>
+
+            <!-- Datos de la Transacción -->
+            <div class="form-group">
+                <label for="monto">Monto Recibido ($)</label>
+                <input type="number" id="monto" placeholder="0.00" min="0" required>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="concepto">Concepto de Pago</label>
+                <textarea id="concepto" rows="3" placeholder="Descripción del pago..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-guardar">Generar Recibo</button>
+        </form>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+.recibo-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.grid-form {
+  display: grid;
+  grid-template-columns: 1fr; /* Vista Móvil */
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.btn-guardar {
+  background-color: #2563eb;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  grid-column: 1 / -1;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    /* Degradado de azul oscuro a azul medio */
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Adaptación para Tablet y PC (pantallas mayores a 600px) */
+@media (min-width: 600px) {
+  .grid-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .full-width {
+    grid-column: span 2;
+  }
+}
