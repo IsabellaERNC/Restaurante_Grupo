@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recibo de Caja | Pompompurin Restaurante</title>
+
+    <link rel="stylesheet" href="../css/recibo.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <div class="logo">
+            🍮
+        </div>
+        <img src="../img/comida.png" alt="Pompompurin">
+
+        <div>
+
+            <h1>Mi Restaurante</h1>
+
+            <p>Recibo de caja</p>
+
+        </div>
+    </header>
+
+    <!-- contenido principal -->
+    <main class="contenedor">
+
+        <div class="titulo">
+
+            <h2>🍮 Recibo de Caja</h2>
+
+            <p>Registra los datos del cliente y el pago recibido</p>
+
+        </div>
+
+        <!-- datos del recibo -->
+        <section class="tarjeta">
+
+            <h3>🍮 Datos del recibo</h3>
+
+            <form id="form-recibo" class="formulario">
+
+                <div class="campo">
+
+                    <label for="nombre-cliente">
+                        Nombre del Cliente
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre-cliente"
+                        placeholder="Ej. Ana María Gómez"
+                        required
+                    >
+
+                </div>
+
+                <div class="campo">
+
+                    <label for="tipo-doc">
+                        Tipo de Documento
+                    </label>
+
+                    <select id="tipo-doc" required>
+
+                        <option value="" disabled selected>
+                            🍮Seleccione...
+                        </option>
+
+                        <option value="CC">Cédula de Ciudadanía</option>
+                        <option value="CE">Cédula de Extranjería</option>
+                        <option value="NIT">NIT</option>
+                        <option value="Pasaporte">Pasaporte</option>
+
+                    </select>
+
+                </div>
+
+                <div class="campo">
+
+                    <label for="num-doc">
+                        Número de Identificación
+                    </label>
+
+                    <input
+                        type="text"
+                        id="num-doc"
+                        placeholder="Ej. 1020304050"
+                        required
+                    >
+
+                </div>
+
+                <div class="campo">
+
+                    <label for="monto">
+                        Monto Recibido ($)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="monto"
+                        placeholder="0.00"
+                        min="0"
+                        required
+                    >
+
+                </div>
+
+                <div class="campo campo-ancho">
+
+                    <label for="concepto">
+                        Concepto de Pago
+                    </label>
+
+                    <textarea
+                        id="concepto"
+                        rows="3"
+                        placeholder="Descripción del pago..."
+                    ></textarea>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <!--BOTONEEEEEEEEEEES-->
+
+        <div class="acciones">
+
+            <button type="reset" form="form-recibo" class="btn cancelar">
+                Cancelar
+            </button>
+            <button type="submit" form="form-recibo" class="btn guardar">
+                🍮Generar Recibo
+            </button>
+
+        </div>
+
+    </main>
+
+    <!--pie de paginaaaaa-->
+
+    <footer>
+        <p>🍮Restaurante: Sistema de recibos</p>
+    </footer>
+
+</body>
+
+</html>
