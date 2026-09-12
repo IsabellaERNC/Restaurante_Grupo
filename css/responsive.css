@@ -1,0 +1,164 @@
+/* ================================================================
+   Responsive Pompompurin — reglas compartidas por TODAS las vistas
+   del tema (encabezado, tarjetas, formularios, botones, PQRS...).
+
+   Se incluye de última en cada página, después de su hoja de tema
+   (pedido.css / pqrs.css / recibo.css / Comprobante.css) y de
+   dashboard.css, para poder ajustar cualquiera de esos componentes
+   en los mismos dos puntos de quiebre: tablet (≤768px) y celular
+   (≤480px). Así evitamos mantener los mismos breakpoints repetidos
+   —y desincronizados— en cuatro hojas distintas.
+   ================================================================ */
+
+/* ---- Salvaguarda global: nada debe desbordar el ancho de pantalla ---- */
+* {
+    box-sizing: border-box;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---- Tablets (≤768px) ---- */
+@media screen and (max-width: 768px) {
+
+    .encabezado {
+        padding: 20px;
+        gap: 10px;
+    }
+    .encabezado img {
+        right: 20px;
+        top: 10px;
+        width: 75px;
+    }
+    .encabezado h1 { font-size: 26px; }
+    .encabezado p  { font-size: 14px; }
+
+    .contenedor {
+        width: 92%;
+        margin: 25px auto;
+    }
+    .titulo h2 { font-size: 28px; }
+
+    .tarjeta,
+    .tarjeta-resumen {
+        padding: 22px;
+    }
+
+    .formulario {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    .formulario .campo-full,
+    .campo-ancho {
+        grid-column: 1 / -1;
+    }
+
+    .acciones {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* PQRS */
+    .tipo-grid { grid-template-columns: repeat(2, 1fr); }
+    .resultado-header { flex-direction: column; }
+    .tabs { justify-content: center; }
+
+    /* Comprobante de Egreso: el botón de cerrar sesión ya no fuerza
+       el ancho del encabezado en pantallas medianas */
+    .cerrar-sesion { margin-left: 0; }
+}
+
+/* ---- Celulares (≤480px) ---- */
+@media screen and (max-width: 480px) {
+
+    .encabezado {
+        padding: 15px;
+        min-height: 75px;
+        flex-wrap: wrap;
+    }
+    .logo { font-size: 35px; }
+    .encabezado h1 { font-size: 23px; }
+    .encabezado p  { font-size: 13px; }
+    .encabezado img {
+        right: 10px;
+        top: 10px;
+        width: 60px;
+    }
+    .cerrar-sesion {
+        width: 100%;
+    }
+    .cerrar-sesion .btn {
+        width: 100%;
+    }
+
+    .contenedor {
+        width: 94%;
+        margin: 20px auto;
+    }
+    .titulo { margin-bottom: 20px; }
+    .titulo h2 { font-size: 25px; padding-right: 10px; }
+    .titulo p  { font-size: 14px; line-height: 1.5; }
+
+    .tarjeta,
+    .tarjeta-resumen {
+        width: 100%;
+        padding: 18px;
+        border-radius: 15px;
+        margin-bottom: 18px;
+    }
+    .tarjeta h3,
+    .tarjeta-resumen h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .formulario { grid-template-columns: 1fr; gap: 15px; }
+    .campo input,
+    .campo select,
+    .campo textarea {
+        font-size: 14px;
+        padding: 11px 12px;
+    }
+    .materia-label { font-size: 14px; line-height: 1.3; }
+
+    .Pedido-vacio { padding: 18px 10px; }
+    .icono-pedido { font-size: 38px; }
+    .Pedido-vacio p { font-size: 14px; }
+    .Pedido-vacio span { font-size: 13px; line-height: 1.4; }
+    .total { font-size: 18px; padding-top: 15px; }
+
+    .acciones {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+    .acciones .btn { width: 100%; }
+
+    footer {
+        min-height: 120px;
+        padding: 30px 15px;
+        font-size: 13px;
+    }
+
+    /* PQRS */
+    .tipo-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .tipo-card { padding: 14px 8px; }
+    .tipo-desc { display: none; } /* deja las tarjetas cómodas y legibles en pantallas muy chicas */
+    .tabs { gap: 4px; }
+    .tab-btn { padding: 10px 12px; font-size: 13px; }
+    .consulta-row { flex-direction: column; align-items: stretch; }
+    .consulta-row .btn { width: 100%; }
+    .historial-toolbar { flex-direction: column; align-items: stretch; }
+    .historial-toolbar .btn { justify-content: center; }
+    .radicado-num { font-size: 32px; }
+}
+
+/* ---- Pantallas grandes: evita que las tarjetas se estiren en exceso ---- */
+@media screen and (min-width: 1400px) {
+    .contenedor { max-width: 1100px; }
+}

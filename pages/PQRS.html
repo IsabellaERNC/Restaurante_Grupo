@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/pedido.css">
     <link rel="stylesheet" href="../css/pqrs.css">
     <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/responsive.css">
 </head>
 
 <body>
@@ -63,25 +64,33 @@
                 <div class="tipo-grid">
 
                     <div class="tipo-card" data-tipo="Petición">
-                        <div class="tipo-icon">📝</div>
+                        <div class="tipo-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                        </div>
                         <div class="tipo-label">Petición</div>
                         <div class="tipo-desc">Solicita información o un servicio</div>
                     </div>
 
                     <div class="tipo-card" data-tipo="Queja">
-                        <div class="tipo-icon">😟</div>
+                        <div class="tipo-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+                        </div>
                         <div class="tipo-label">Queja</div>
                         <div class="tipo-desc">Reporta una mala atención</div>
                     </div>
 
                     <div class="tipo-card" data-tipo="Reclamo">
-                        <div class="tipo-icon">⚠️</div>
+                        <div class="tipo-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+                        </div>
                         <div class="tipo-label">Reclamo</div>
                         <div class="tipo-desc">Exige corrección de un error</div>
                     </div>
 
                     <div class="tipo-card" data-tipo="Sugerencia">
-                        <div class="tipo-icon">💡</div>
+                        <div class="tipo-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+                        </div>
                         <div class="tipo-label">Sugerencia</div>
                         <div class="tipo-desc">Propón una mejora</div>
                     </div>
@@ -129,7 +138,9 @@
 
             <!-- confirmación del radicado -->
             <section class="tarjeta radicado-box" id="radicado-box">
-                <div class="icon-success">✅</div>
+                <div class="icon-success">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                </div>
                 <h3>Solicitud radicada</h3>
                 <p>Guarda tu número de radicado para hacer seguimiento.</p>
                 <div class="radicado-num" id="radicado-num">—</div>
@@ -213,7 +224,9 @@
 
             <!-- no encontrado -->
             <section class="tarjeta not-found" id="not-found">
-                <div class="cara">🔍</div>
+                <div class="cara">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                </div>
                 <p><strong>No se encontró el radicado</strong></p>
                 <p>Verifica el número e intenta de nuevo.</p>
             </section>
@@ -227,7 +240,10 @@
 
                 <div class="historial-toolbar">
                     <h3>🍮 Solicitudes registradas</h3>
-                    <button class="btn cancelar" id="btn-limpiar">🗑️ Limpiar historial</button>
+                    <button class="btn cancelar" id="btn-limpiar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
+                        Limpiar historial
+                    </button>
                 </div>
 
                 <div id="historial-container">

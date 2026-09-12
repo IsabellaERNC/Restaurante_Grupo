@@ -105,8 +105,12 @@ body {
 
 .formulario {
     display: grid;
-    grid-template-columns: 1fr; /* Vista Móvil */
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+}
+
+.campo-ancho {
+    grid-column: 1 / -1;
 }
 
 .campo {
@@ -153,17 +157,8 @@ body {
     color: #b8a98e;
 }
 
-/* Adaptación para Tablet y PC (pantallas mayores a 600px) */
-
-@media (min-width: 600px) {
-    .formulario {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .campo-ancho {
-        grid-column: span 2;
-    }
-}
+/* El diseño responsive de .encabezado, .tarjeta, .formulario, etc. vive
+   en css/responsive.css, compartido por todas las vistas Pompompurin. */
 
 /* ------- botones*/
 

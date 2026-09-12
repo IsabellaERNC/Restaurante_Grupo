@@ -271,16 +271,11 @@ footer {
 
 .bg-grid {
     display: none !important;
-
-
 }
-.encabezado img{
- position: absolute;
- right: 10px;
- top: 10px;
- width: 60px;
- height: auto;
-  
 
+/* El diseño responsive de .encabezado, .tarjeta, .formulario, etc. vive
+   en css/responsive.css, compartido por todas las vistas Pompompurin. */
 
+.cerrar-sesion {
+    margin-left: auto;
 }

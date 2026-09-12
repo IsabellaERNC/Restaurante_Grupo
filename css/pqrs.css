@@ -73,8 +73,13 @@
     box-shadow: 0 0 0 3px rgba(229, 185, 63, 0.20);
 }
 .tipo-icon {
-    font-size: 30px;
+    display: flex;
+    justify-content: center;
     margin-bottom: 8px;
+    color: #5a4632;
+}
+.tipo-card.selected .tipo-icon {
+    color: #b8860b;
 }
 .tipo-label {
     font-weight: bold;
@@ -186,8 +191,10 @@
     justify-content: center;
 }
 .icon-success {
-    font-size: 44px;
+    display: flex;
+    justify-content: center;
     margin-bottom: 4px;
+    color: #065f46;
 }
 .radicado-num {
     font-family: "Dancing Script", cursive;
@@ -283,8 +290,10 @@
     display: block;
 }
 .not-found .cara {
-    font-size: 44px;
+    display: flex;
+    justify-content: center;
     margin-bottom: 10px;
+    color: #a8926e;
 }
 .not-found p {
     margin: 4px 0;
@@ -301,6 +310,11 @@
 }
 .historial-toolbar h3 {
     margin: 0;
+}
+.historial-toolbar .btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 .historial-table {
     width: 100%;
@@ -335,12 +349,5 @@
     font-weight: 400;
 }
 
-/* ---- Responsive ---- */
-@media (max-width: 767px) {
-    .tipo-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .resultado-header {
-        flex-direction: column;
-    }
-}
+/* El diseño responsive de .tipo-grid, .resultado-header, etc. vive
+   en css/responsive.css, compartido por todas las vistas Pompompurin. */
