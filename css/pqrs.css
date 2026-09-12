@@ -1,0 +1,359 @@
+/* ================================================================
+   PQRS · estilo Pompompurin
+   Hereda la base visual de pedido.css (encabezado, .contenedor,
+   .titulo, .tarjeta, .formulario, .campo, .acciones, .btn, footer)
+   y añade aquí solo los componentes propios de PQRS.
+   ================================================================ */
+
+/* ---- Enlace "volver" ---- */
+.volver {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #5a4632;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+}
+.volver:hover {
+    text-decoration: underline;
+}
+
+/* ---- Subtítulo dentro de una tarjeta ---- */
+.tarjeta-sub {
+    margin: -15px 0 22px;
+    color: #806b50;
+    font-weight: 400;
+}
+
+/* ---- Pestañas ---- */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #eadca8;
+}
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: inherit;
+    color: #806b50;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+}
+.tab-btn:hover {
+    color: #5a4632;
+}
+.tab-btn.active {
+    color: #5a4632;
+    border-bottom-color: #e5b93f;
+}
+
+.tab-panel {
+    display: none;
+}
+.tab-panel.active {
+    display: block;
+}
+
+/* ---- Selector de tipo de solicitud ---- */
+.tipo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 28px;
+}
+.tipo-card {
+    border: 2px solid #eadca8;
+    border-radius: 14px;
+    padding: 18px 12px;
+    text-align: center;
+    cursor: pointer;
+    background: #fff;
+    transition: .15s;
+}
+.tipo-card:hover {
+    border-color: #e5b93f;
+    background: #fffdf2;
+}
+.tipo-card.selected {
+    border-color: #e5b93f;
+    background: #fdf3d6;
+    box-shadow: 0 0 0 3px rgba(229, 185, 63, 0.20);
+}
+.tipo-icon {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+.tipo-label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #5a4632;
+}
+.tipo-desc {
+    font-size: 12px;
+    font-weight: 400;
+    color: #806b50;
+    margin-top: 4px;
+}
+
+/* ---- Formulario a una sola columna con campos anchos ---- */
+.formulario .campo-full {
+    grid-column: 1 / -1;
+}
+.campo textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 2px solid #eadca8;
+    border-radius: 10px;
+    background: #fff;
+    color: #5a4632;
+    font-size: 15px;
+    font-family: inherit;
+    resize: vertical;
+}
+.campo textarea:focus {
+    outline: none;
+    border-color: #e5b93f;
+    box-shadow: 0 0 0 3px rgba(229, 185, 63, 0.20);
+}
+.opcional {
+    font-weight: 400;
+    color: #806b50;
+}
+
+/* ---- Mensaje de error del formulario ---- */
+.form-error {
+    display: none;
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: #fde2e2;
+    color: #b91c1c;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+/* ---- Fila de consulta ---- */
+.consulta-row {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+.consulta-row .campo {
+    flex: 1;
+    min-width: 220px;
+}
+.consulta-row .btn {
+    white-space: nowrap;
+}
+
+/* ---- Etiquetas de tipo ---- */
+.badge {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.badge-peticion   { background: #dbeafe; color: #1d4ed8; }
+.badge-queja      { background: #fde2e2; color: #b91c1c; }
+.badge-reclamo    { background: #fef3c7; color: #b45309; }
+.badge-sugerencia { background: #d8f3e3; color: #065f46; }
+
+/* ---- Etiquetas de estado ---- */
+.estado-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.estado-recibido   { background: #dbeafe; color: #1d4ed8; }
+.estado-en-proceso { background: #fef3c7; color: #b45309; }
+.estado-resuelto   { background: #d8f3e3; color: #065f46; }
+
+/* ---- Caja del radicado generado ---- */
+.radicado-box {
+    display: none;
+    text-align: center;
+    border-style: dashed;
+}
+.radicado-box.visible {
+    display: block;
+}
+.radicado-box h3 {
+    margin-bottom: 6px;
+}
+.radicado-box p {
+    font-weight: 400;
+    color: #806b50;
+    margin: 6px 0;
+}
+.radicado-box .acciones {
+    justify-content: center;
+}
+.icon-success {
+    font-size: 44px;
+    margin-bottom: 4px;
+}
+.radicado-num {
+    font-family: "Dancing Script", cursive;
+    font-size: 42px;
+    font-weight: 700;
+    color: #b8860b;
+    letter-spacing: 3px;
+    margin: 12px 0;
+}
+
+/* ---- Tarjeta de resultado de la consulta ---- */
+.resultado-card {
+    display: none;
+}
+.resultado-card.visible {
+    display: block;
+}
+.resultado-card p {
+    font-weight: 400;
+    line-height: 1.6;
+}
+.resultado-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+.resultado-asunto {
+    font-weight: bold;
+    font-size: 18px;
+    color: #5a4632;
+}
+.resultado-meta {
+    font-size: 13px;
+    font-weight: 400;
+    color: #806b50;
+    margin-top: 4px;
+}
+.resultado-meta strong {
+    color: #b8860b;
+}
+
+/* ---- Línea de tiempo ---- */
+.timeline {
+    margin-top: 20px;
+    border-top: 2px solid #eadca8;
+    padding-top: 18px;
+}
+.timeline-title {
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 14px;
+    color: #5a4632;
+}
+.timeline-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+.timeline-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e5b93f;
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+.timeline-dot.inactive {
+    background: #eadca8;
+}
+.timeline-text {
+    font-size: 13px;
+    font-weight: 400;
+}
+.timeline-text strong {
+    display: block;
+    color: #5a4632;
+}
+.timeline-text span {
+    color: #806b50;
+}
+
+/* ---- Radicado no encontrado ---- */
+.not-found {
+    display: none;
+    text-align: center;
+    color: #806b50;
+    font-weight: 400;
+}
+.not-found.visible {
+    display: block;
+}
+.not-found .cara {
+    font-size: 44px;
+    margin-bottom: 10px;
+}
+.not-found p {
+    margin: 4px 0;
+}
+
+/* ---- Historial ---- */
+.historial-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+.historial-toolbar h3 {
+    margin: 0;
+}
+.historial-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+.historial-table th {
+    text-align: left;
+    padding: 10px 12px;
+    background: #fdf3d6;
+    color: #806b50;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.historial-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eadca8;
+    font-weight: 400;
+}
+.historial-table tr:last-child td {
+    border-bottom: none;
+}
+.historial-table .radicado-cell {
+    font-weight: bold;
+    color: #b8860b;
+}
+.historial-empty {
+    text-align: center;
+    padding: 30px;
+    color: #806b50;
+    font-weight: 400;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 767px) {
+    .tipo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .resultado-header {
+        flex-direction: column;
+    }
+}
