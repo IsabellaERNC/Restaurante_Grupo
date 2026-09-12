@@ -9,21 +9,29 @@
     
 
     <link rel="stylesheet" href="../css/pedido.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
 </head>
 
 <body>
+
+    <div class="app">
+
+        <div id="dashboard-sidebar"></div>
+
+        <main class="main">
+
+            <div id="dashboard-topbar"></div>
 
     <header class = "encabezado">
 
         <div class = "logo">
             🍮
         </div>
+        <img src="../img/comida.png" alt="Pompompurin">
 
         <div>
 
             <h1>Mi Restaurante</h1>
-            <img class="pompompurin" src="../img/comida.png" alt="Pompompurin">
-            
 
             <p>Gestion de pedidos</p>
 
@@ -32,7 +40,7 @@
     </header>
 
     <!-- contenido principal -->
-    <main class = "contenedor">
+    <div class = "contenedor">
 
         <div class = "titulo">
 
@@ -106,7 +114,6 @@
                     <div class = "campo">
 
                         <label class="materia-label" for="materia">
-                        </label>
                             Materia prima
                         </label>
 
@@ -201,12 +208,20 @@
             </button>
 
         </div>
-    </main>
+    </div>
     <!--pie de paginaaaaa-->
 
     <footer>
         <p>🍮Restaurante: Sistema de pedidos</p>
     </footer>
+
+        </main>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+    <script>
+        montarDashboard({ activo: 'pedido', base: '../', titulo: 'Pedido' });
+    </script>
 
 </body>
 

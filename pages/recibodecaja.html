@@ -8,9 +8,18 @@
     <title>Recibo de Caja | Pompompurin Restaurante</title>
 
     <link rel="stylesheet" href="../css/recibo.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
 </head>
 
 <body>
+
+    <div class="app">
+
+        <div id="dashboard-sidebar"></div>
+
+        <main class="main">
+
+            <div id="dashboard-topbar"></div>
 
     <header class="encabezado">
 
@@ -29,7 +38,7 @@
     </header>
 
     <!-- contenido principal -->
-    <main class="contenedor">
+    <div class="contenedor">
 
         <div class="titulo">
 
@@ -144,13 +153,21 @@
 
         </div>
 
-    </main>
+    </div>
 
     <!--pie de paginaaaaa-->
 
     <footer>
         <p>🍮Restaurante: Sistema de recibos</p>
     </footer>
+
+        </main>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+    <script>
+        montarDashboard({ activo: 'recibo', base: '../', titulo: 'Recibo de caja' });
+    </script>
 
 </body>
 

@@ -6,6 +6,7 @@
     <title>Comprobante de Egreso | Pompompurin Restaurante</title>
     <!-- ENLAZADO CORRECTAMENTE AL CSS DE COMPROBANTE -->
     <link rel="stylesheet" href="../css/Comprobante.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
   </head>
   <body>
     <!-- SECCIÓN DE AUTENTICACIÓN / INICIO DE SESIÓN -->
@@ -51,6 +52,14 @@
 
     <!-- MÓDULO PRINCIPAL: COMPROBANTE DE EGRESO (OCULTO POR DEFECTO) -->
     <div id="dashboard-section" class="hidden">
+     <div class="app">
+
+      <div id="dashboard-sidebar"></div>
+
+      <main class="main">
+
+        <div id="dashboard-topbar"></div>
+
       <!-- Encabezado Estilizado Pompompurin -->
       <header class="encabezado">
         <div class="logo">🍮</div>
@@ -67,7 +76,7 @@
       </header>
 
       <!-- Contenido Principal -->
-      <main class="contenedor">
+      <div class="contenedor">
         <div class="titulo">
           <h2>🍮 Nuevo Comprobante de Egreso</h2>
           <p>
@@ -177,12 +186,15 @@
             </button>
           </div>
         </form>
-      </main>
+      </div>
 
       <!-- Pie de página -->
       <footer>
         <p>🍮 Restaurante: Módulo Financiero Seguro</p>
       </footer>
+
+      </main>
+     </div>
     </div>
 
     <!-- Script de Control de Sesión -->
@@ -203,6 +215,10 @@
         login.classList.remove("hidden");
         login.style.opacity = "1";
       }
+    </script>
+    <script src="../js/dashboard.js"></script>
+    <script>
+      montarDashboard({ activo: 'egreso', base: '../', titulo: 'Comprobante de Egreso' });
     </script>
   </body>
 </html>

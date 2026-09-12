@@ -1,1 +1,97 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Restaurante</title><link rel="stylesheet" href="css/style.css"></head><body><div class="app"><aside class="sidebar"><div class="brand">🍽️ <span>Restaurante</span></div><nav class="nav"><a class="active" href="index.html">🏠 Inicio</a><a href="pages/pedido.html">📋 Pedido</a><a href="pages/recibodecaja.html">🧾 Recibo de caja</a><a href="#">💰 Egreso</a><a href="pages/PQRS.html">📊 PQRS</a><a href="#">🍴 Platos</a><a href="#">👤 Usuarios</a></nav></aside><main class="main"><header class="topbar"><button class="menu-btn">☰</button><b>Panel de gestión</b><span>👤 Usuario</span></header><section class="content"><div class="page-head"><div><h1>Bienvenido</h1><p>Gestiona la operación de tu restaurante.</p></div></div><div class="grid cards"><div class="card"><div class="card-title">Pedidos hoy</div><div class="card-value">24</div></div><div class="card"><div class="card-title">Platos disponibles</div><div class="card-value">38</div></div><div class="card"><div class="card-title">Pendientes</div><div class="card-value">7</div></div><div class="card"><div class="card-title">Clientes</div><div class="card-value">126</div></div></div><div class="card" style="margin-top:20px"><h2>Accesos rápidos</h2><a class="btn btn-primary" href="pages/pedido.html">Crear pedido</a></div></section><div class="footer">Plantilla académica · Responsive</div></main></div><script src="js/app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inicio | Pompompurin Restaurante</title>
+
+    <link rel="stylesheet" href="css/pedido.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <div id="dashboard-sidebar"></div>
+
+        <main class="main">
+
+            <div id="dashboard-topbar"></div>
+
+            <header class="encabezado">
+
+                <div class="logo">
+                    🍮
+                </div>
+                <img src="img/comida.png" alt="Pompompurin">
+
+                <div>
+                    <h1>Mi Restaurante</h1>
+                    <p>Panel de gestión</p>
+                </div>
+
+            </header>
+
+            <!-- contenido principal -->
+            <div class="contenedor">
+
+                <div class="titulo">
+                    <h2>🍮 Bienvenido</h2>
+                    <p>Gestiona la operación de tu restaurante.</p>
+                </div>
+
+                <!-- métricas -->
+                <div class="metricas">
+
+                    <section class="tarjeta metrica">
+                        <div class="metrica-title">Pedidos hoy</div>
+                        <div class="metrica-value">24</div>
+                    </section>
+
+                    <section class="tarjeta metrica">
+                        <div class="metrica-title">Platos disponibles</div>
+                        <div class="metrica-value">38</div>
+                    </section>
+
+                    <section class="tarjeta metrica">
+                        <div class="metrica-title">Pendientes</div>
+                        <div class="metrica-value">7</div>
+                    </section>
+
+                    <section class="tarjeta metrica">
+                        <div class="metrica-title">Clientes</div>
+                        <div class="metrica-value">126</div>
+                    </section>
+
+                </div>
+
+                <!-- accesos rápidos -->
+                <section class="tarjeta">
+                    <h3>🍮 Accesos rápidos</h3>
+                    <div class="acciones" style="justify-content:flex-start">
+                        <a class="btn guardar" href="pages/pedido.html">Crear pedido</a>
+                        <a class="btn cancelar" href="pages/PQRS.html">Ir a PQRS</a>
+                    </div>
+                </section>
+
+            </div>
+
+            <!--pie de paginaaaaa-->
+            <footer>
+                <p>🍮 Restaurante: Panel de gestión</p>
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+    <script>
+        montarDashboard({ activo: 'inicio', base: '', titulo: 'Panel de gestión' });
+    </script>
+
+</body>
+
+</html>

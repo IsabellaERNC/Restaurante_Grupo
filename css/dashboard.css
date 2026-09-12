@@ -1,0 +1,149 @@
+/* ================================================================
+   Dashboard Pompompurin — layout compartido (sidebar + topbar)
+   Se combina con pedido.css/pqrs.css/recibo.css/Comprobante.css,
+   que aportan el resto del tema (tarjetas, formularios, botones).
+   Se monta con js/dashboard.js -> montarDashboard({...})
+   ================================================================ */
+
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ---- Barra lateral ---- */
+.sidebar {
+    width: 250px;
+    background: #3d2c1d;
+    color: #f1e4c3;
+    padding: 22px 16px;
+    position: fixed;
+    inset: 0 auto 0 0;
+    overflow-y: auto;
+    box-sizing: border-box;
+    z-index: 30;
+}
+
+.sidebar .brand {
+    font-family: "Dancing Script", cursive;
+    font-size: 28px;
+    font-weight: 700;
+    padding: 6px 12px 26px;
+    color: #fff;
+}
+
+.sidebar .brand span {
+    color: #f4c842;
+}
+
+.sidebar .nav a {
+    display: block;
+    color: #e7d9bd;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 10px;
+    margin: 5px 0;
+}
+
+.sidebar .nav a:hover,
+.sidebar .nav a.active {
+    background: #55402a;
+    color: #f4c842;
+}
+
+/* ---- Contenido principal ---- */
+.main {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    box-sizing: border-box;
+}
+
+/* ---- Barra superior ---- */
+.topbar {
+    height: 66px;
+    background: #fffdf2;
+    border-bottom: 2px solid #f3d477;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+    box-sizing: border-box;
+}
+
+.topbar b {
+    font-family: "Dancing Script", cursive;
+    font-size: 22px;
+    font-weight: 700;
+    color: #5a4632;
+}
+
+.menu-btn {
+    display: none;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    color: #5a4632;
+    cursor: pointer;
+}
+
+/* El encabezado Pompompurin de cada vista necesita quedar posicionado
+   para que su imagen (position:absolute) se ancle a él y no al viewport */
+.encabezado {
+    position: relative;
+}
+
+/* ---- Tarjetas de métricas (usadas en Inicio) ---- */
+.metricas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.metrica {
+    text-align: center;
+}
+
+.metrica-title {
+    color: #806b50;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.metrica-value {
+    font-family: "Dancing Script", cursive;
+    font-size: 34px;
+    font-weight: 700;
+    color: #5a4632;
+    margin-top: 6px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1100px) {
+    .metricas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .sidebar {
+        transform: translateX(-100%);
+        transition: .25s;
+    }
+    .sidebar.open {
+        transform: translateX(0);
+    }
+    .main {
+        margin-left: 0;
+        width: 100%;
+    }
+    .menu-btn {
+        display: block;
+    }
+    .topbar {
+        padding: 0 16px;
+    }
+    .metricas {
+        grid-template-columns: 1fr;
+    }
+}

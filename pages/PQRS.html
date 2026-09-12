@@ -9,9 +9,18 @@
 
     <link rel="stylesheet" href="../css/pedido.css">
     <link rel="stylesheet" href="../css/pqrs.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
 </head>
 
 <body>
+
+    <div class="app">
+
+        <div id="dashboard-sidebar"></div>
+
+        <main class="main">
+
+            <div id="dashboard-topbar"></div>
 
     <header class="encabezado">
 
@@ -29,10 +38,9 @@
     </header>
 
     <!-- contenido principal -->
-    <main class="contenedor">
+    <div class="contenedor">
 
         <div class="titulo">
-            <a href="../index.html" class="volver">← Volver al inicio</a>
             <h2>🍮 PQRS</h2>
             <p>Peticiones, Quejas, Reclamos y Sugerencias</p>
         </div>
@@ -230,13 +238,20 @@
 
         </div>
 
-    </main>
+    </div>
 
     <!-- pie de pagina -->
     <footer>
         <p>🍮 Restaurante: Sistema de PQRS</p>
     </footer>
 
+        </main>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+    <script>
+        montarDashboard({ activo: 'pqrs', base: '../', titulo: 'PQRS' });
+    </script>
     <script src="../js/pqrs.js"></script>
 
 </body>
